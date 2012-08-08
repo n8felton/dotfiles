@@ -34,5 +34,3 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
 else
 	alias flushdns=''
 fi
-
-alias curl='curl -LO#'
