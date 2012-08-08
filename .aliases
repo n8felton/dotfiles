@@ -1,0 +1,38 @@
+# Enable aliases to be sudo.ed
+alias sudo='sudo '
+
+# Color!
+if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
+	alias ls='command ls -G'
+elif [ -x /usr/bin/dircolors ]; then
+	alias ls='command ls --color=auto'
+fi
+
+alias grep='command grep --color=auto'
+
+# Command Shortcuts
+# Directory Listings
+alias ll='ls -alh'
+
+# Faster directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias -- -='cd -'
+
+# IP Addresses
+alias remoteip='dig myip.opendns.com @resolver1.opendns.com +short'
+
+if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
+	alias localip='ipconfig getifaddr en0'
+else
+	alias localip='ip -4 -o addr show eth0 | egrep -o "([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}" | head -n 1'
+fi
+
+# Flush DNS
+if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
+	alias flushdns='dscacheutil -flushcache'
+else
+	alias flushdns=''
+fi
+
+alias curl='curl -LO#'
