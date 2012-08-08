@@ -29,7 +29,9 @@ else
 fi
 
 # Flush DNS
-if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
+if [ "$OSTYPE" = "darwin11" -o "$OSTYPE" = "darwin12" ]; then
+	alias flushdns='killall -HUP mDNSResponder'
+elif [ "$OSTYPE" = "darwin10" ]; then
 	alias flushdns='dscacheutil -flushcache'
 else
 	alias flushdns=''
