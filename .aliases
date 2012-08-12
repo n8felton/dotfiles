@@ -36,3 +36,8 @@ elif [ "$OSTYPE" = "darwin10" ]; then
 else
 	alias flushdns=''
 fi
+
+# Mac OS X Logout
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+	alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
+fi
