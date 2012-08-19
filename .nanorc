@@ -1,0 +1,5 @@
+include "~/.nano/man.nanorc"
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/sh.nanorc"
+include "~/.nano/xml.nanorc"
