@@ -9,6 +9,8 @@ unset file
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+complete -cf sudo
+
 if [ `id -u` = 0 ]; then
 	PS1='\[\e[31;1m\]\u\]@\h\[\e[0m\]:\[\e[34;1m\]\w\[\e[00m\] \$ '
 	alias rm='rm -i'
