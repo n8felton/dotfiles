@@ -17,5 +17,5 @@ if [ `id -u` = 0 ]; then
 	alias cp='cp -i'
 	alias mv='mv -i'
 else
-	PS1='\[\e[32;1m\]\u\[\e[36;1m\]@\h\[\e[0m\]:\[\e[34;1m\]\w\[\e[00m\] \$ '
+	PS1='\[\e[32;1m\]\u\[\e[34;1m\]@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[00m\] \$ '
 fi
