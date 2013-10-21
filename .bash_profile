@@ -12,10 +12,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 complete -cf sudo
 
 if [ `id -u` = 0 ]; then
-	PS1='\[\e[31;1m\]\u\]@\h\[\e[0m\]:\[\e[34;1m\]\w\[\e[00m\] \$ '
+	PS1='\[\e[31;1m\]\u\]@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[00m\] \$ '
 	alias rm='rm -i'
 	alias cp='cp -i'
 	alias mv='mv -i'
 else
-	PS1='\[\e[32;1m\]\u\[\e[34;1m\]@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[00m\] \$ '
+	PS1='\[\e[32;1m\]\u\[\e[31;1m\]@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[00m\] \$ '
 fi
