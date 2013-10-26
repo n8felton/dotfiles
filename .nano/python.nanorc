@@ -29,6 +29,3 @@ color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 
 #Comment Color
 color brightblue "#.*$"
-
-set tabsize 4
-set tabtospaces
