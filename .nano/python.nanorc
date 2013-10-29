@@ -27,6 +27,5 @@ color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 #color cyan start="("""[^"]|[^"]""")" end="("""[^"]|[^"]""")" start="'''[^']" end="'''"
 #color cyan start="\"\"\"" end="\"\"\""
 
-
 #Comment Color
 color brightblue "#.*$"

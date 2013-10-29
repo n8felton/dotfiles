@@ -3,3 +3,5 @@ include "~/.nano/nanorc.nanorc"
 include "~/.nano/python.nanorc"
 include "~/.nano/sh.nanorc"
 include "~/.nano/xml.nanorc"
+
+set tabsize 4
