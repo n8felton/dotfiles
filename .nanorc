@@ -5,3 +5,4 @@ include "~/.nano/sh.nanorc"
 include "~/.nano/xml.nanorc"
 
 set tabsize 4
+set rebindkeypad
