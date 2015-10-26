@@ -17,5 +17,8 @@ case "$OSTYPE" in
 		;;
 esac
 
+# Get the serial number of the system.
+alias serialnumber='ioreg -c IOPlatformExpertDevice -d 2 | awk -F\" '\''/IOPlatformSerialNumber/{print $(NF-1)}'\'''
+
 # Mac OS X Logout
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
