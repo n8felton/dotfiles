@@ -1,4 +1,4 @@
-h1. Easy Download
+### Easy Download
 
 <pre><code>cd ~ && curl -Lk# https://github.com/n8felton/dotfiles/tarball/master | tar --strip-components 1 -xz && source .bash_profile</code></pre>
 
