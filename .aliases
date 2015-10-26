@@ -2,12 +2,7 @@
 alias sudo='sudo '
 
 # Color!
-if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
-	alias ls='command ls -G'
-elif [ -x /usr/bin/dircolors ]; then
-	alias ls='command ls --color=auto'
-fi
-
+alias ls='command ls --color=auto'
 alias grep='command grep --color=auto'
 
 # Command Shortcuts
@@ -21,30 +16,9 @@ alias -- -='cd -'
 
 # IP Addresses
 alias remoteip='dig myip.opendns.com @resolver1.opendns.com +short'
+alias localip='ip -4 -o addr show eth0 | egrep -o "([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}" | head -n 1'
 
-if [[ "$OSTYPE" =~ ^darwin ]]; then 	#Mac OS X
-	alias localip='ipconfig getifaddr en0'
-else
-	alias localip='ip -4 -o addr show eth0 | egrep -o "([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}" | head -n 1'
-fi
-
-# Flush DNS
-case "$OSTYPE" in
-	darwin14)
-		alias flushdns='discoveryutil mdnsflushcache;discoveryutil udnsflushcache'
-		;;
-	darwin13)
-		alias flushdns='dscacheutil -flushcache;killall -HUP mDNSResponder'
-		;;
-	darwin1[1-2])
-		alias flushdns='killall -HUP mDNSResponder'
-		;;
-	darwin10)
-		alias flushdns='dscacheutil -flushcache'
-		;;
-esac
-
-# Mac OS X Logout
+# OS X Aliases
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-	alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
+	source .aliases_osx
 fi

@@ -1,0 +1,21 @@
+# Color!
+alias ls='command ls -G'
+
+# Local IP address
+alias localip='ifconfig | awk '\''{if($1=="inet" && $5=="broadcast") {print $2}}'\'''
+
+# Flush DNS
+case "$OSTYPE" in
+	darwin14)
+		alias flushdns='which discoveryutil && discoveryutil mdnsflushcache || killall -HUP mDNSResponder'
+		;;
+	darwin10)
+		alias flushdns='dscacheutil -flushcache'
+		;;
+	*)
+		alias flushdns='killall -HUP mDNSResponder'
+		;;
+esac
+
+# Mac OS X Logout
+alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
