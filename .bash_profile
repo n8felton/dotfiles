@@ -19,3 +19,6 @@ if [ $EUID = 0 ]; then
 else
 	PS1='\[\e[32m\]\u\[\e[33m\]@\h\[\e[0m\]:\[\e[36m\]\w\[\e[00m\] \$ '
 fi
+
+# Change the xterm title to match our prompt (without the pwd)
+echo -ne "\033]2;${USER}@$(hostname -s)\007"
