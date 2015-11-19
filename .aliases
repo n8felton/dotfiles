@@ -22,3 +22,6 @@ alias localip='ip -4 -o addr show eth0 | egrep -o "([[:digit:]]{1,3}\.){3}[[:dig
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 	source .aliases_osx
 fi
+
+# Allow for dotfiles to be updated
+alias update_dotfiles='cd ~ && curl -Lk# https://github.com/n8felton/dotfiles/tarball/master | tar --strip-components 1 -xz && source .bash_profile'
