@@ -9,6 +9,10 @@ alias grep='command grep --color=auto'
 # Directory Listings
 alias ll='ls -alh'
 
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
 # Faster directory navigation
 alias ..='cd ..'
 alias ...='cd ../..'
