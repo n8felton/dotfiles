@@ -1,8 +1,0 @@
-syntax "xml" ".*\.([jrs]?html?|xml|plist|sgml?)$"
-color white "^.+$"
-color green  start="<" end=">"
-color cyan   "<[^> ]+"
-color cyan   ">"
-color yellow start="<!DOCTYPE" end="[/]?>"
-color yellow start="<!--" end="-->"
-color red    "&[^;]*;"
