@@ -15,4 +15,5 @@ export GPG_TTY=${TTY}
 # Change the xterm title to match our prompt
 printf "\033]0;%s\007" "${HOSTNAME%%.*}"
 
-
+# Allow for interactive comments
+setopt interactivecomments
