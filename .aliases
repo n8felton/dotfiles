@@ -20,7 +20,7 @@ alias -- -='cd -'
 
 # IP Addresses
 alias remoteip='dig +short -4 myip.opendns.com @resolver1.opendns.com'
-alias remoteip6='dig +short -6 myip.opendns.com AAAA @resolver1.ipv6-sandbox.opendns.com'
+alias remoteip6='dig +short -6 myip.opendns.com AAAA @resolver1.opendns.com'
 
 # macOS Aliases
 if [[ "$OSTYPE" =~ ^darwin ]]; then
