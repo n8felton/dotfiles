@@ -28,4 +28,4 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
 fi
 
 # Allow for dotfiles to be updated
-alias dotfiles_update='cd ~ && curl -Lk# https://github.com/n8felton/dotfiles/tarball/master | tar --strip-components 1 -xz && source .bash_profile'
+alias dotfiles_update="cd ~ && curl -Lk# https://github.com/n8felton/dotfiles/tarball/master | tar --strip-components 1 -xz && source .${SHELL##*/}rc"

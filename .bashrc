@@ -3,6 +3,10 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
+for file in ~/.{exports,aliases,functions}; do
+	[[ -r "$file" ]] && source "$file"
+done
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
