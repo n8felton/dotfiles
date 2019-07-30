@@ -13,7 +13,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export GPG_TTY=${TTY}
 
 # Change the xterm title to match our prompt
-printf "\033]0;%s\007" "${HOSTNAME%%.*}"
+printf "\033]0;%s\007" "${HOST%%.*}"
 
 # Allow for interactive comments
 setopt interactivecomments
