@@ -21,3 +21,5 @@ alias serialnumber='ioreg -c IOPlatformExpertDevice -d 2 | awk -F\" '\''/IOPlatf
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 
 function xman() { open x-man-page://$@ ; }
+
+alias lclt='launchctl list | grep -v com.apple | sort -k3'
