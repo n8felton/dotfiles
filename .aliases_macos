@@ -22,4 +22,4 @@ alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 
 function xman() { open x-man-page://$@ ; }
 
-alias lclt='launchctl list | grep -v com.apple | sort -k3'
+alias nads='launchctl list | grep -v com.apple | sort -k3' #non-apple daemons (nads)
