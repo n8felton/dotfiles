@@ -26,4 +26,5 @@ alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 function xman() { open x-man-page://$@ ; }
 
 alias nads='launchctl list | grep -v com.apple | sort -k3' #non-apple daemons (nads)
-alias kraken="open -na 'GitKraken' --args -p $(pwd)"
+alias now='date +%Y%m%dT%H%M%S'
+alias today='date +%F'
