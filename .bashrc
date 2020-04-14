@@ -9,6 +9,7 @@ done
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+export EDITOR=$(which vim)
 
 complete -cf sudo
 
