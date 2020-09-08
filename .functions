@@ -7,3 +7,8 @@ function localip(){
 		ifconfig | awk '{if($1=="inet" && $5=="broadcast") {print $2}}'
 	fi
 }
+
+function chaincheck () {
+  openssl s_client -verify 5 -quiet -connect $1 2>&1 < /dev/null | awk -F'=' '/CN/ {print $NF}'
+}
+
