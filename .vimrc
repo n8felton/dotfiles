@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set tabstop=4   " tab size eql 4 spaces
+set backspace=indent,eol,start  " more powerful backspacing
 
 let monokai=expand("${HOME}/.vim/colors/monokai.vim")
 if !filereadable(monokai)
