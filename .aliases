@@ -22,6 +22,9 @@ alias -- -='cd -'
 alias remoteip='dig +short -4 myip.opendns.com @resolver1.opendns.com'
 alias remoteip6='dig +short -6 myip.opendns.com AAAA @resolver1.opendns.com'
 
+# lsof listening port
+alias lsof-listen='lsof +c0 -P -i4tcp -sTCP:LISTEN'
+
 # macOS Aliases
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 	source "${HOME}/.aliases_macos"
