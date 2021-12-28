@@ -18,3 +18,13 @@ printf "\033]0;%s\007" "${HOST%%.*}"
 
 # Allow for interactive comments
 setopt interactivecomments
+
+# case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
+
+autoload -Uz compinit && compinit
+
