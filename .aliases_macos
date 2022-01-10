@@ -15,7 +15,7 @@ case "$OSTYPE" in
 esac
 
 # Get the serial number of the system.
-alias serialnumber='ioreg -d2 -c IOPlatformExpertDevice | awk -F\" '\''/IOPlatformSerialNumber/{print $(NF-1)}'\'''
+alias serialnumber='ioreg -d2 -k IOPlatformSerialNumber | awk -F\" '\''/IOPlatformSerialNumber/{print $(NF-1)}'\'''
 
 # Get the UUID/UDID of the sytem
 alias uuid='ioreg -d2 -c IOPlatformExpertDevice | awk -F\" '\''/IOPlatformUUID/{print $(NF-1)}'\'''
