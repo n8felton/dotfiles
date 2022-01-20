@@ -28,3 +28,6 @@ function xman() { open x-man-page://$@ ; }
 alias nads='launchctl list | grep -v com.apple | sort -k3' #non-apple daemons (nads)
 alias now='date +%Y%m%dT%H%M%S'
 alias today='date +%F'
+
+# Opens GitKraken using the current git repo
+alias kraken='open gitkraken://repo/$PWD'
