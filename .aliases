@@ -32,3 +32,5 @@ fi
 
 # Allow for dotfiles to be updated
 alias dotfiles_update="cd ~ && curl -Ls https://github.com/n8felton/dotfiles/tarball/master | tar --strip-components 1 -xz && source .${SHELL##*/}rc"
+
+alias switch_sc='gpg-connect-agent "scd serialno" "learn --force" /bye'
