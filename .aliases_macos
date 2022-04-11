@@ -25,7 +25,10 @@ alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 
 function xman() { open x-man-page://$@ ; }
 
-alias nads='launchctl list | grep -v com.apple | sort -k3' #non-apple daemons (nads)
+#alias nads='launchctl list | grep -v com.apple | sort -k3' #non-apple daemons (nads)
+alias nads='launchctl print system | awk -F\t '\''/^[[:blank:]]services = {/,/}/ {if(/{|}/) next; if(/com.apple/) next; printf "%s %s\n", $3,$4}'\'' | sort -k3'
+alias user-nads='launchctl print gui/$(id -u) | awk -F\t '\''/^[[:blank:]]services = {/,/}/ {if(/{|}/) next; if(/com.apple/) next; printf "%s %s\n", $3,$4}'\'' | sort -k3'
+
 alias now='date +%Y%m%dT%H%M%S'
 alias today='date +%F'
 
