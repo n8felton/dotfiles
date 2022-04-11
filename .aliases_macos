@@ -17,8 +17,8 @@ esac
 # Get the serial number of the system.
 alias serialnumber='ioreg -d2 -k IOPlatformSerialNumber | awk -F\" '\''/IOPlatformSerialNumber/{print $(NF-1)}'\'''
 
-# Get the UUID/UDID of the sytem
-alias uuid='ioreg -d2 -c IOPlatformExpertDevice | awk -F\" '\''/IOPlatformUUID/{print $(NF-1)}'\'''
+# Get the Hardware UUID of the system
+alias uuid='ioreg -d2 -k IOPlatformUUID | awk -F\" '\''/IOPlatformUUID/{print $(NF-1)}'\'''
 
 # Mac OS X Logout
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
