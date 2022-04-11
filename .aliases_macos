@@ -20,6 +20,9 @@ alias serialnumber='ioreg -d2 -k IOPlatformSerialNumber | awk -F\" '\''/IOPlatfo
 # Get the Hardware UUID of the system
 alias uuid='ioreg -d2 -k IOPlatformUUID | awk -F\" '\''/IOPlatformUUID/{print $(NF-1)}'\'''
 
+# Convert `uuidgen` to lowercase to comply with RCF 4122 Section 3
+alias uuidgen="uuidgen | tr '[[:upper:]]' '[[:lower:]]'"
+
 # Mac OS X Logout
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 
