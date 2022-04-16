@@ -9,11 +9,12 @@ done
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+export GPG_TTY=${TTY}
 export EDITOR=$(which vim)
+export LOG_COLORS=cxgxdxhxcxhxBxdxCxGxHxxA
+export LOG_STYLE=compact
 
 complete -cf sudo
-
-export GPG_TTY=$(tty)
 
 if [ $EUID = 0 ]; then
 	PS1='\[\e[31m\]\u@\h\[\e[0m\]:\[\e[36m\]\w\[\e[00m\] \$ '

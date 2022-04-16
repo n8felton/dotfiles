@@ -12,6 +12,8 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export GPG_TTY=${TTY}
 export EDITOR=$(which vim)
+export LOG_COLORS=cxgxdxhxcxhxBxdxCxGxHxxA
+export LOG_STYLE=compact
 
 # Change the xterm title to match our prompt
 printf "\033]0;%s\007" "${HOST%%.*}"
