@@ -15,3 +15,6 @@ function chaincheck () {
 function smbpath () {
   sed 's#\\#/#g' <<< "$1"
 }
+
+function dig-answer () { dig +noall +noclass +nottlid +answer "${@}" | column -t } 
+
