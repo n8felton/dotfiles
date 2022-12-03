@@ -32,3 +32,4 @@ fi
 
 autoload -Uz compinit && compinit
 
+printf "\033]0;%s | %s\007" "${HOST%%.*}" "${PWD##*/}"
