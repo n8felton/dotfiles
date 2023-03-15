@@ -18,3 +18,4 @@ function smbpath () {
 
 function dig-answer () { dig +noall +noclass +nottlid +answer "${@}" | column -t } 
 
+function cppb { echo -n "${PWD}/${1}" | pbcopy }
