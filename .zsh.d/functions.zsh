@@ -20,3 +20,17 @@ function smbpath () {
 function dig-answer () { dig +noall +noclass +nottlid +answer "${@}" | column -t } 
 
 function cppb { echo -n "${PWD}/${1}" | pbcopy }
+
+function diskio  {
+  if [[ $EUID -ne 0 ]]; then
+    echo "This must be run as root"
+    return 1
+  fi
+  echo -n "Running Write Test... "
+  dd if=/dev/zero bs=2048k of=2GB count=1024 2>&1 | awk '/bytes/ {print $1/1024/1024/$5, "MB/sec" }'
+  purge
+  echo -n "Running Read Test...  "
+  dd if=2GB bs=2048k of=/dev/null count=1024 2>&1 | awk '/bytes/ {print $1/1024/1024/$5, "MB/sec" }'
+  purge
+  rm 2GB
+}
