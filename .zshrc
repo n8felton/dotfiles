@@ -5,6 +5,12 @@ if [[ -d "${ZDOTDIR:-$HOME}"/.zsh.d ]]; then
     done
 fi
 
+# Allow for local overrides
+local local_zsh="${ZDOTDIR:-$HOME}/.zsh.d/local.zsh"
+if [[ -f "${local_zsh}" ]]; then
+  source "${local_zsh}"
+fi
+
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
