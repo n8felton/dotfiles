@@ -1,3 +1,4 @@
+autoload -Uz compinit && compinit
 
 if [[ -d "${ZDOTDIR:-$HOME}"/.zsh.d ]]; then
     for ZSH_FILE in $(ls -A "${ZDOTDIR:-$HOME}"/.zsh.d/*.zsh); do
@@ -35,7 +36,5 @@ if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
-
-autoload -Uz compinit && compinit
 
 printf "\033]0;%s | %s\007" "${HOST%%.*}" "${PWD##*/}"
