@@ -3,14 +3,16 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-for file in ~/.{exports,aliases,functions}; do
+# .extra is host-local and untracked; it loads last so it can override
+for file in ~/.{exports,aliases,functions,extra}; do
 	[[ -r "$file" ]] && source "$file"
 done
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export GPG_TTY=${TTY}
-export EDITOR=$(which vim)
+export LS_COLORS='di=01;36'
+export GPG_TTY=$(tty)
+export EDITOR=vim
 export LOG_COLORS=cxgxdxhxcxhxBxdxCxGxHxxA
 export LOG_STYLE=compact
 

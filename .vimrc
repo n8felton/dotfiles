@@ -9,8 +9,9 @@ if !filereadable(monokai)
 	silent !curl -Ls https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -o "${HOME}/.vim/colors/monokai.vim"
 endif
 
-colorscheme monokai
 syntax enable
+" The download above fails on a host with no network
+silent! colorscheme monokai
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
